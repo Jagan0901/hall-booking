@@ -25,10 +25,10 @@ router.post("/book", async(req,res)=>{
         const bookingStatus = isRoomAvailable.status;
         bookedRoom.status   = bookingStatus;
         const bookingRoom   = await bookRoom(bookedRoom)
-        return res.send("Your room has been booked");
+        return res.send({message:"Your room has been booked"});
 
     }else if(isRoomAvailable.status === "Booked"){
-        return res.send("This room is already booked. Please try some other")
+        return res.status(404).send({error:"This room is already booked. Please try some other"})
     }
 
 })
