@@ -23,6 +23,10 @@ export const client = await createConnection()
 
 app.use(express.json());
 
+app.get("/", (req,res) => {
+    res.send(`Enter  /rooms/bookedRooms or /rooms/customerBookedRooms to get the particular data`)
+});
+
 app.use("/rooms",roomRouter)
 
 app.listen(PORT,()=> console.log("Server started on PORT",PORT))
