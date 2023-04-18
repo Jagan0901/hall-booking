@@ -27,6 +27,17 @@ app.get("/", (req,res) => {
     res.send(`Enter  /rooms/bookedRooms or /rooms/customerBookedRooms to get the particular data`)
 });
 
+//If you are creating rooms data, Please try to create respective data in the given below field(key) format
+
+// 1. rooms data : 
+//      roomId    : any Number,
+//      roomName  : your wish,
+//      amenities : ["","",""],
+//      seats     : your wish,
+//      price     : your wish,
+//      status    : "Available"
+
+
 app.use("/rooms",roomRouter)
 
 app.listen(PORT,()=> console.log("Server started on PORT",PORT))
