@@ -32,7 +32,7 @@ app.get("/", (req,res) => {
 // 1. rooms data : 
 //      roomId    : any Number,
 //      roomName  : your wish,
-//      amenities : ["","",""],
+//      amenities : ["your wish", "your wish", "your wish"],
 //      seats     : your wish,
 //      price     : your wish,
 //      status    : "Available"
