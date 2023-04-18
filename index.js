@@ -30,12 +30,14 @@ app.get("/", (req,res) => {
 //If you are creating rooms data, Please try to create respective data in the given below field(key) format
 
 // 1. rooms data : 
+//    { 
 //      roomId    : any Number,
 //      roomName  : your wish,
 //      amenities : ["your wish", "your wish", "your wish"],
 //      seats     : your wish,
 //      price     : your wish,
 //      status    : "Available"
+//     }
 
 
 app.use("/rooms",roomRouter)
